@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7015A0201EAD50BE0015EBC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7015A01F1EAD50BE0015EBC8 /* AppDelegate.swift */; };
-		7015A0221EAD50BE0015EBC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7015A0211EAD50BE0015EBC8 /* ViewController.swift */; };
+		7015A0221EAD50BE0015EBC8 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7015A0211EAD50BE0015EBC8 /* SignInVC.swift */; };
 		7015A0251EAD50BE0015EBC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7015A0231EAD50BE0015EBC8 /* Main.storyboard */; };
 		7015A02A1EAD50BE0015EBC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7015A0281EAD50BE0015EBC8 /* LaunchScreen.storyboard */; };
 		7015A0321EADF0D80015EBC8 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7015A0311EADF0D80015EBC8 /* LoginTextField.swift */; };
+		70754B501EC483DA00A0D7EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70754B4F1EC483DA00A0D7EF /* GoogleService-Info.plist */; };
 		70E33C851EB2440000F7BE94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E33C821EB2440000F7BE94 /* Assets.xcassets */; };
 		70E33C861EB2440000F7BE94 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 70E33C831EB2440000F7BE94 /* Base.lproj */; };
 		70E33C871EB2440000F7BE94 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 70E33C841EB2440000F7BE94 /* README.md */; };
@@ -23,11 +24,12 @@
 		5745A3A1BB553BD4A61A0710 /* Pods-Butlerstar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Butlerstar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Butlerstar/Pods-Butlerstar.release.xcconfig"; sourceTree = "<group>"; };
 		7015A01C1EAD50BE0015EBC8 /* Butlerstar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Butlerstar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7015A01F1EAD50BE0015EBC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7015A0211EAD50BE0015EBC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7015A0211EAD50BE0015EBC8 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		7015A0241EAD50BE0015EBC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7015A0291EAD50BE0015EBC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7015A02B1EAD50BF0015EBC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7015A0311EADF0D80015EBC8 /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		70754B4F1EC483DA00A0D7EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70E33C821EB2440000F7BE94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70E33C831EB2440000F7BE94 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		70E33C841EB2440000F7BE94 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -77,18 +79,43 @@
 		7015A01E1EAD50BE0015EBC8 /* Butlerstar */ = {
 			isa = PBXGroup;
 			children = (
+				70FA19491EC48732003AE629 /* Model */,
+				70FA194B1EC4874E003AE629 /* Controller */,
+				70FA194A1EC48741003AE629 /* View */,
 				7015A01F1EAD50BE0015EBC8 /* AppDelegate.swift */,
-				7015A0211EAD50BE0015EBC8 /* ViewController.swift */,
 				7015A0311EADF0D80015EBC8 /* LoginTextField.swift */,
 				7015A0231EAD50BE0015EBC8 /* Main.storyboard */,
 				70E33C821EB2440000F7BE94 /* Assets.xcassets */,
 				70E33C881EB28B2E00F7BE94 /* Assets.xcassets */,
 				70E33C831EB2440000F7BE94 /* Base.lproj */,
 				70E33C841EB2440000F7BE94 /* README.md */,
+				70754B4F1EC483DA00A0D7EF /* GoogleService-Info.plist */,
 				7015A0281EAD50BE0015EBC8 /* LaunchScreen.storyboard */,
 				7015A02B1EAD50BF0015EBC8 /* Info.plist */,
 			);
 			path = Butlerstar;
+			sourceTree = "<group>";
+		};
+		70FA19491EC48732003AE629 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		70FA194A1EC48741003AE629 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		70FA194B1EC4874E003AE629 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7015A0211EAD50BE0015EBC8 /* SignInVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		B358B0C226274C93428BDCE1 /* Pods */ = {
@@ -164,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7015A02A1EAD50BE0015EBC8 /* LaunchScreen.storyboard in Resources */,
+				70754B501EC483DA00A0D7EF /* GoogleService-Info.plist in Resources */,
 				70E33C861EB2440000F7BE94 /* Base.lproj in Resources */,
 				70E33C851EB2440000F7BE94 /* Assets.xcassets in Resources */,
 				7015A0251EAD50BE0015EBC8 /* Main.storyboard in Resources */,
@@ -227,7 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7015A0321EADF0D80015EBC8 /* LoginTextField.swift in Sources */,
-				7015A0221EAD50BE0015EBC8 /* ViewController.swift in Sources */,
+				7015A0221EAD50BE0015EBC8 /* SignInVC.swift in Sources */,
 				70E33C871EB2440000F7BE94 /* README.md in Sources */,
 				7015A0201EAD50BE0015EBC8 /* AppDelegate.swift in Sources */,
 			);
@@ -355,6 +383,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZQFU5BPGDU;
 				INFOPLIST_FILE = Butlerstar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.butlerstar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -369,6 +398,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZQFU5BPGDU;
 				INFOPLIST_FILE = Butlerstar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.butlerstar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
