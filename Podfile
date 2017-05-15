@@ -15,5 +15,6 @@ target 'Butlerstar' do
   pod 'Firebase/Storage'
   pod 'FBSDKLoginKit'
   pod 'SwiftKeychainWrapper'
+  pod 'GoogleSignIn'
   
 end
