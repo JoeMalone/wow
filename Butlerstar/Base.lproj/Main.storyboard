@@ -123,11 +123,30 @@
                     <connections>
                         <outlet property="emailField" destination="CR8-ZV-OYX" id="IMe-eA-JdN"/>
                         <outlet property="pwdField" destination="bku-nT-DQv" id="wvr-iD-WTL"/>
+                        <segue destination="19N-BE-qMs" kind="show" identifier="goToHome" id="tE1-9B-2VL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.40000000000001" y="135.38230884557723"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="4Nh-p5-CPh">
+            <objects>
+                <viewController id="19N-BE-qMs" customClass="HomeVC" customModule="Butlerstar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pCM-pI-IgE"/>
+                        <viewControllerLayoutGuide type="bottom" id="mpX-V3-Vt7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iJI-Y5-HTD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.98039215690000003" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwt-W8-vsv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186" y="135"/>
         </scene>
     </scenes>
     <resources>
