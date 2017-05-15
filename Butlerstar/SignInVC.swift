@@ -10,9 +10,14 @@ import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
 import Firebase
+import GoogleSignIn
 
 
 class SignInVC: UIViewController {
+    
+    @IBOutlet weak var emailField: LoginTextField!
+    
+    @IBOutlet weak var pwdField: LoginTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +60,36 @@ class SignInVC: UIViewController {
         } )
     }
     
+    @IBAction func GIDSignInButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func signInTapped(_ sender: Any) {
+        
+        
+        if let email = emailField.text, let pwd = pwdField.text {
+            FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion:{ (user, error) in
+                if error == nil {
+                    print("JESS: Email user authenticated with Firebase")
+                    
+                } else {
+                    
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                        if error != nil {
+                            print("JESS: Unable to authenticate with Firebase using email")
+                        
+                        } else {
+                            
+                            print("JESS:Successfully authenticated with Firebase")
+                        }
+                    } )
+                    
+                }
+    
+          } )
+       }
+        
+        
+    }
     
 }
-

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FBSDKLoginKit
+import GoogleSignIn
 
 
 @UIApplicationMain
@@ -25,7 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FBSDKApplicationDelegate.sharedInstance().application(application,
             didFinishLaunchingWithOptions: launchOptions)
-        
         
         // Add any custom logic here.
         return true
