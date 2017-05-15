@@ -17,6 +17,8 @@
 		70E33C861EB2440000F7BE94 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 70E33C831EB2440000F7BE94 /* Base.lproj */; };
 		70E33C871EB2440000F7BE94 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 70E33C841EB2440000F7BE94 /* README.md */; };
 		70E33C891EB28B2E00F7BE94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E33C881EB28B2E00F7BE94 /* Assets.xcassets */; };
+		70F145D31EC9D5B500791E27 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F145D21EC9D5B500791E27 /* Constants.swift */; };
+		70F145D51ECA008A00791E27 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F145D41ECA008A00791E27 /* HomeVC.swift */; };
 		98B8D73ACA515AA89A7E9B2C /* Pods_Butlerstar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9447F051B500145B95D52601 /* Pods_Butlerstar.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,10 +32,13 @@
 		7015A02B1EAD50BF0015EBC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7015A0311EADF0D80015EBC8 /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		70754B4F1EC483DA00A0D7EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		708E656B1EC5D3B800784CEB /* Butlerstar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Butlerstar.entitlements; sourceTree = "<group>"; };
 		70E33C821EB2440000F7BE94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70E33C831EB2440000F7BE94 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		70E33C841EB2440000F7BE94 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		70E33C881EB28B2E00F7BE94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70F145D21EC9D5B500791E27 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		70F145D41ECA008A00791E27 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		9447F051B500145B95D52601 /* Pods_Butlerstar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Butlerstar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DD034A8C03C54E157E64E4 /* Pods-Butlerstar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Butlerstar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Butlerstar/Pods-Butlerstar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +84,8 @@
 		7015A01E1EAD50BE0015EBC8 /* Butlerstar */ = {
 			isa = PBXGroup;
 			children = (
+				70F145CB1EC9D4F300791E27 /* Util */,
+				708E656B1EC5D3B800784CEB /* Butlerstar.entitlements */,
 				70FA19491EC48732003AE629 /* Model */,
 				70FA194B1EC4874E003AE629 /* Controller */,
 				70FA194A1EC48741003AE629 /* View */,
@@ -94,6 +101,15 @@
 				7015A02B1EAD50BF0015EBC8 /* Info.plist */,
 			);
 			path = Butlerstar;
+			sourceTree = "<group>";
+		};
+		70F145CB1EC9D4F300791E27 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				70F145D21EC9D5B500791E27 /* Constants.swift */,
+			);
+			name = Util;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		70FA19491EC48732003AE629 /* Model */ = {
@@ -114,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				7015A0211EAD50BE0015EBC8 /* SignInVC.swift */,
+				70F145D41ECA008A00791E27 /* HomeVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -164,6 +181,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = ZQFU5BPGDU;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -254,9 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70F145D31EC9D5B500791E27 /* Constants.swift in Sources */,
 				7015A0321EADF0D80015EBC8 /* LoginTextField.swift in Sources */,
 				7015A0221EAD50BE0015EBC8 /* SignInVC.swift in Sources */,
 				70E33C871EB2440000F7BE94 /* README.md in Sources */,
+				70F145D51ECA008A00791E27 /* HomeVC.swift in Sources */,
 				7015A0201EAD50BE0015EBC8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +405,7 @@
 			baseConfigurationReference = F5DD034A8C03C54E157E64E4 /* Pods-Butlerstar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Butlerstar/Butlerstar.entitlements;
 				DEVELOPMENT_TEAM = ZQFU5BPGDU;
 				INFOPLIST_FILE = Butlerstar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -396,6 +421,7 @@
 			baseConfigurationReference = 5745A3A1BB553BD4A61A0710 /* Pods-Butlerstar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Butlerstar/Butlerstar.entitlements;
 				DEVELOPMENT_TEAM = ZQFU5BPGDU;
 				INFOPLIST_FILE = Butlerstar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
