@@ -14,7 +14,7 @@ import GoogleSignIn
 import SwiftKeychainWrapper
 
 
-class SignInVC: UIViewController {
+class SignInVC: UIViewController, GIDSignInUIDelegate {
     
     @IBOutlet weak var emailField: LoginTextField!
     
@@ -22,6 +22,9 @@ class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -36,6 +39,7 @@ class SignInVC: UIViewController {
             performSegue(withIdentifier: "goToHome", sender: nil)
               print("JESS: ID found in keychain")
         }
+       
     }
 
 
@@ -80,7 +84,18 @@ class SignInVC: UIViewController {
         } )
     }
     
+
+
+    
+    
+    
+    
+    
+    
     @IBAction func GIDSignInButton(_ sender: Any) {
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
+        
         
     }
     
@@ -129,6 +144,7 @@ class SignInVC: UIViewController {
         performSegue(withIdentifier: "goToHome", sender: nil)
         
     }
+    
     
     
 }
