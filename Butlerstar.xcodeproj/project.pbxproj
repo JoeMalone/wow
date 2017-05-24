@@ -162,7 +162,6 @@
 				TargetAttributes = {
 					7015A01B1EAD50BE0015EBC8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = ZQFU5BPGDU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -244,7 +243,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -381,7 +380,7 @@
 			baseConfigurationReference = F5DD034A8C03C54E157E64E4 /* Pods-Butlerstar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZQFU5BPGDU;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Butlerstar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -396,7 +395,7 @@
 			baseConfigurationReference = 5745A3A1BB553BD4A61A0710 /* Pods-Butlerstar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZQFU5BPGDU;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Butlerstar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
