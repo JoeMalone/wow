@@ -19,15 +19,21 @@ class SignInVC: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var emailField: LoginTextField!
     
     @IBOutlet weak var pwdField: LoginTextField!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.completeSig),
+            name: NSNotification.Name(rawValue: "googleLogin"),
+            object: nil)
     }
-
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "googleLogin"), object: nil);
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -37,15 +43,14 @@ class SignInVC: UIViewController, GIDSignInUIDelegate {
         
         if let _ = KeychainWrapper.defaultKeychainWrapper.string(forKey: KEY_UID) {
             performSegue(withIdentifier: "goToHome", sender: nil)
-              print("JESS: ID found in keychain")
+            print("JESS: ID found in keychain")
         }
-       
     }
-
-
-
-
-
+    
+    
+    
+    
+    
     @IBAction func facebookBtnTapped(_ sender: Any) {
         
         let facebookLogin = FBSDKLoginManager()
@@ -68,35 +73,31 @@ class SignInVC: UIViewController, GIDSignInUIDelegate {
         FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
             if error != nil {
                 print("JESS: Unable to authenticate with Firebase - \(error)")
-              
+                var uiAlert = UIAlertController(title: "Error", message:error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                self.present(uiAlert, animated: true, completion: nil)
+                
+                uiAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                    print("Click of default button")
+                }))
+                
             } else {
                 print("JESS: Successfully authenticated with Firebase")
                 
                 if let user = user {
                     self.completeSignIn(id: user.uid)
-                
-                   // bruge KeychainWrapper.defaultKeychainWrapper.string(forKey: KEY_UID)
                     
-                //KeychainWrapper.setString(user.uid, forKey: KEY_UID)
+                    // bruge KeychainWrapper.defaultKeychainWrapper.string(forKey: KEY_UID)
+                    
+                    //KeychainWrapper.setString(user.uid, forKey: KEY_UID)
                 }
-                    
+                
             }
         } )
     }
     
-
-
-    
-    
-    
-    
-    
-    
     @IBAction func GIDSignInButton(_ sender: Any) {
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
-        
-        
     }
     
     @IBAction func signInTapped(_ sender: Any) {
@@ -109,42 +110,42 @@ class SignInVC: UIViewController, GIDSignInUIDelegate {
                     if let user = user {
                         self.completeSignIn(id: user.uid)
                     }
-                   
+                    
                     
                 } else {
                     
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
                             print("JESS: Unable to authenticate with Firebase using email")
-                        
+                            
                         } else {
                             
                             print("JESS:Successfully authenticated with Firebase")
                             if let user = user {
-                              self.completeSignIn(id: user.uid)
+                                self.completeSignIn(id: user.uid)
                                 
                             }
-                        
+                            
                         }
                     } )
                     
                 }
-    
-          } )
-       }
+                
+            } )
+        }
         
         
     }
     
     func completeSignIn(id: String) {
-        
-        
         let keychainResult = KeychainWrapper.defaultKeychainWrapper.set(id, forKey: KEY_UID)
         print("JESS: Data saved to keychain \(keychainResult)")
         performSegue(withIdentifier: "goToHome", sender: nil)
-        
     }
     
-    
+    func completeSig()
+    {
+        performSegue(withIdentifier: "goToHome", sender: nil)
+    }
     
 }

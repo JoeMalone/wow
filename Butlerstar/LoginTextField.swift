@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class LoginTextField: UITextField {
-
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -27,5 +27,5 @@ class LoginTextField: UITextField {
         return textRect(forBounds: bounds)
         
     }
-
+    
 }

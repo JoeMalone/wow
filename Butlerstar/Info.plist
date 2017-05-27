@@ -21,7 +21,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb182348955460274</string>
+				<string>fb164424354093552</string>
 			</array>
 		</dict>
 		<dict>
@@ -36,7 +36,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>182348955460274</string>
+	<string>164424354093552</string>
 	<key>FacebookDisplayName</key>
 	<string>BUTLERSTAR</string>
 	<key>LSApplicationQueriesSchemes</key>
