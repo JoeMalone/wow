@@ -60,6 +60,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.9)
   - GTMSessionFetcher/Full (1.1.9):
     - GTMSessionFetcher/Core (= 1.1.9)
+  - SideMenu (2.3.2)
   - SwiftKeychainWrapper (3.0.1)
 
 DEPENDENCIES:
@@ -69,6 +70,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - GoogleSignIn
+  - SideMenu
   - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
@@ -86,8 +88,9 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
+  SideMenu: 3fa07dd05d4bade2b6f9889fb1877e312e1ba319
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
 
-PODFILE CHECKSUM: 222a6e80be7b3caed002dc1f9c9e981554ca3503
+PODFILE CHECKSUM: 2472c957beb3dbb2ee697e6ac48932835c9a7651
 
 COCOAPODS: 1.2.0

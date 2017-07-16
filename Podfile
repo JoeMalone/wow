@@ -16,5 +16,6 @@ target 'Butlerstar' do
   pod 'FBSDKLoginKit'
   pod 'SwiftKeychainWrapper'
   pod 'GoogleSignIn'
+  pod 'SideMenu'
   
 end
